@@ -1,18 +1,17 @@
-import Head from 'next/head'
-
+//pages/index.js
+import Head from 'next/head';
+import { ProfileList } from '../components/ProfileList';
 export default function Home() {
   return (
     <div>
       <Head>
         <title>Meetic test-entretien</title>
-        <h1>YOUPI  !!!!</h1>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        <i className="bi-alarm"></i>
-        <br></br>
-        <i className="bi-alarm"></i>
-      </main>
+      <div className='container d-grid gap-4'>
+        <ProfileList data='online' />
+        <ProfileList data='featured' />
+      </div>
     </div>
   )
 }
